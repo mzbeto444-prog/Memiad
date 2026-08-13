@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comunidade - Chat ao Vivo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login-container">
+    <h2>🌐 Entre na Comunidade</h2>
+    <input type="text" id="username-input" placeholder="Seu nome" />
+    <button id="login-btn">Entrar</button>
+  </div>
+
+  <div id="chat-container" style="display:none;">
+    <div id="header">
+      <span id="current-user"></span>
+      <span id="online-count">👥 0 online</span>
+    </div>
+
+    <div id="users-sidebar">
+      <h4>Online</h4>
+      <ul id="user-list"></ul>
+    </div>
+
+    <div id="messages-area">
+      <div id="messages"></div>
+      <div id="typing-indicator"></div>
+      <div id="input-area">
+        <input type="text" id="message-input" placeholder="Digite sua mensagem..." />
+        <button id="send-btn">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+          </html>
